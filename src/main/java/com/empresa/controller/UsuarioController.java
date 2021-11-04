@@ -35,8 +35,8 @@ public class UsuarioController {
 
 	@GetMapping("/consulta/{email}")
 	@ResponseBody
-	public ResponseEntity<List<Usuario>> consulta(@PathVariable("email") String email){
-		List<Usuario> listaporemail = usuarioService.listaUsuarioporEmail(email);
+	public ResponseEntity<Usuario> consulta(@PathVariable("email") String email){
+		Usuario listaporemail = usuarioService.listaUsuarioporEmail(email);
 		return ResponseEntity.ok(listaporemail);
 	}
 

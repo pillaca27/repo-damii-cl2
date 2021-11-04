@@ -36,7 +36,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	}
 
 	@Override
-	public List<Usuario> listaUsuarioporEmail(String email) {
+	public Usuario listaUsuarioporEmail(String email) {
 		return usuarioDao.findByUsuario(email);
 	}
 	
